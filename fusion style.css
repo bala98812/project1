@@ -1,0 +1,52 @@
+body{
+    background-color:rgba(0, 0, 0, 0.966);
+    background-image: 
+    linear-gradient(90deg, rgba(48, 43, 43, 0.192) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(41, 37, 37, 0.692) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+main{
+      
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+}
+
+.list {
+    display: flex;
+    gap: 3px; 
+    justify-content: center;
+    padding: 300px;
+    height: fit-content;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.list .item{
+    transition:  .5s;
+    filter: brightness(0);
+}
+
+.item {
+    width: 100px;
+    
+}
+.list .item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.text{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    text-align: center;
+    font-size: 40px;
+    font-style: oblique;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(148, 26, 26);
+}
