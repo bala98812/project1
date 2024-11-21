@@ -1,0 +1,44 @@
+body{
+    background-color: #242223;
+}
+img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.list{
+    columns: 300px;
+}
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    text-align: center;
+}
+svg path{
+    fill: transparent;
+    stroke: rgb(238, 1, 1);
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 4s ease-in-out 1 forwards;
+
+}
+@keyframes textAnimation{
+    0%{
+        stroke-dashoffset: 50;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill:rgb(109, 1, 1) ;
+        stroke-dashoffset: 0;
+    }
+
+}
+.list:hover .item:not(:hover){
+    filter: grayscale(1) blur(10px);
+    transform: translate3d(200px);
+}
